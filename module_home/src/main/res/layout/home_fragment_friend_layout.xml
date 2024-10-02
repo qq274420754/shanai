@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <!-- 这里定义变量 -->
+        <variable
+            name="friendcontent"
+            type="com.shanai.module.home.ui.fragment.FriendVM" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_backgroudprimary">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/home_friend_bg"/>
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="284dp"
+                android:background="#00000000"
+                app:layout_scrollFlags="scroll|enterAlways|exitUntilCollapsed">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="284dp"
+                    android:background="#00000000"
+                    app:layout_scrollFlags="scroll|enterAlways">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-10dp"
+                        android:maxHeight="200dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/home_friend_toptips"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <ImageView
+                        android:id="@+id/img_banner_bg"
+                        android:layout_width="150dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="16dp"
+                        android:rotation="10"
+                        android:src="@drawable/home_friend_topbanner_bg"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.zhpan.bannerview.BannerViewPager
+                        android:id="@+id/banner_groupphoto"
+                        android:layout_width="150dp"
+                        android:layout_height="80dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:rotation="10"
+                        app:bvp_indicator_visibility="gone"
+                        app:bvp_interval="4000"
+                        app:bvp_round_corner="16dp"
+                        app:layout_constraintBottom_toBottomOf="@id/img_banner_bg"
+                        app:layout_constraintLeft_toLeftOf="@id/img_banner_bg"
+                        app:layout_constraintRight_toRightOf="@id/img_banner_bg" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:rotation="10"
+                        android:src="@drawable/home_friend_topphoto_ic"
+                        app:layout_constraintBottom_toTopOf="@+id/banner_groupphoto"
+                        app:layout_constraintRight_toRightOf="@+id/banner_groupphoto" />
+
+                    <ImageView
+                        android:id="@+id/iv_headman"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="16dp"
+                        android:rotation="10"
+                        app:layout_constraintLeft_toLeftOf="@+id/img_banner_bg"
+                        app:layout_constraintTop_toTopOf="@+id/img_banner_bg" />
+
+                    <ImageView
+                        android:id="@+id/iv_linkhead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="10dp"
+                        android:rotation="10"
+                        android:src="@drawable/home_friend_top_headlink"
+                        app:layout_constraintLeft_toRightOf="@+id/iv_headman"
+                        app:layout_constraintTop_toTopOf="@+id/iv_headman" />
+
+                    <ImageView
+                        android:id="@+id/iv_headlady"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="9dp"
+                        android:rotation="10"
+                        app:layout_constraintLeft_toRightOf="@+id/iv_linkhead"
+                        app:layout_constraintTop_toTopOf="@+id/iv_headman" />
+
+                    <!--二级功能菜单-->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/friendsecordmenuview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="84dp"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_status_bar_height"
+                    android:background="@color/common_tran"
+                    app:layout_collapseMode="pin"/>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+            <!--title-->
+            <RelativeLayout
+                android:id="@+id/rl_title"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/common_backgroudprimary"
+                app:layout_collapseMode="pin">
+
+                <com.shanai.shanai.common.view.magicindicator.MagicIndicator
+                    android:id="@+id/friend_magic_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toLeftOf="@+id/iv_search"
+                    android:paddingLeft="6dp"
+                    android:paddingBottom="4dp" />
+
+                <ImageView
+                    android:id="@+id/iv_search"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:padding="10dp"
+                    android:src="@drawable/home_top_search" />
+
+            </RelativeLayout>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/friendviewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/common_backgroudprimary"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

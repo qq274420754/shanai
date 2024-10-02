@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <!-- 这里定义变量 -->
+        <variable
+            name="maincontent"
+            type="com.shanai.shanai.module.home.ui.activity.MainVM" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="?attr/actionBarSize"
+        tools:context=".ui.activity.MainActivity">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.shanai.shanai.common.view.tablayout.CommonTabLayout
+            android:id="@+id/bottomNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:background="@color/common_white"
+            app:common_iconHeight="23dp"
+            app:common_iconWidth="23dp"
+            app:common_indicator_color="@color/common_textprimary"
+            app:common_indicator_height="0dp"
+            app:common_textSelectColor="#333333"
+            app:common_textUnselectColor="#737373"
+            app:common_textsize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

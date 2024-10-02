@@ -1,0 +1,88 @@
+//****************************************
+//********** lib_base 的配置文件 ***********
+//****************************************
+
+plugins {
+    alias(libs.plugins.library)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.hilt)
+    id "kotlin-kapt"
+}
+
+apply from: '../base_lib.gradle'
+
+import com.shanai.buildsrc.*
+
+android {
+
+    buildFeatures {
+        viewBinding = true
+        dataBinding  = true
+    }
+
+    resourcePrefix "base_"
+    namespace 'com.shanai.base'
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+
+    api DependencyConfig.AndroidX.CoreKtx
+    api DependencyConfig.AndroidX.AppCompat
+    api DependencyConfig.AndroidX.ConstraintLayout
+    api DependencyConfig.AndroidX.ActivityKtx
+    api DependencyConfig.AndroidX.FragmentKtx
+    api DependencyConfig.AndroidX.MultiDex
+
+    api DependencyConfig.Android.Material
+    api DependencyConfig.Android.Coordinatorlayout
+
+    api DependencyConfig.Kotlin.Kotlin
+    api DependencyConfig.Kotlin.CoroutinesCore
+    api DependencyConfig.Kotlin.CoroutinesAndroid
+
+    api DependencyConfig.JetPack.ViewModel
+    api DependencyConfig.JetPack.ViewModelSavedState
+    api DependencyConfig.JetPack.LiveData
+    api DependencyConfig.JetPack.Lifecycle
+    api DependencyConfig.JetPack.HiltCore
+
+    api DependencyConfig.GitHub.Gson
+    api DependencyConfig.GitHub.xLog
+    api DependencyConfig.GitHub.MMKV
+    api DependencyConfig.GitHub.AutoSize
+    api DependencyConfig.GitHub.ARoute
+    api DependencyConfig.GitHub.SmartRefreshLayout
+    api DependencyConfig.GitHub.SmartRefreshLayout_classics
+    api DependencyConfig.GitHub.IMmersionBar
+    api DependencyConfig.GitHub.IMmersionBar_ktx
+    api DependencyConfig.GitHub.Bannerviewpager
+    api DependencyConfig.GitHub.viewpagerindicator
+    api DependencyConfig.GitHub.adapterHelper
+    api DependencyConfig.GitHub.Lottie
+//    api DependencyConfig.GitHub.Magic
+
+    api DependencyConfig.GitHub.EventBus
+    api DependencyConfig.GitHub.PermissionX
+    api DependencyConfig.GitHub.AutoService
+    api DependencyConfig.GitHub.OkHttp
+    api DependencyConfig.GitHub.OkHttpInterceptorLogging
+    api DependencyConfig.GitHub.Retrofit
+    api DependencyConfig.GitHub.RetrofitConverterGson
+    api DependencyConfig.GitHub.Glide
+    api DependencyConfig.GitHub.Coil
+    api DependencyConfig.GitHub.CoilGIF
+    api DependencyConfig.GitHub.CoilSVG
+    api DependencyConfig.GitHub.CoilVideo
+
+    api DependencyConfig.SDK.TencentBugly
+    api DependencyConfig.SDK.TencentBuglyNative
+    api DependencyConfig.SDK.TencentTBSX5
+
+    kapt DependencyConfig.GitHub.EventBusAPT
+    kapt DependencyConfig.GitHub.AutoServiceApt
+    kapt DependencyConfig.JetPack.HiltApt
+    kapt DependencyConfig.JetPack.LifecycleCompilerAPT
+
+    debugApi DependencyConfig.GitHub.LeakCanary
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="common_indicator_width_equal_title" format="boolean" />
+</resources>

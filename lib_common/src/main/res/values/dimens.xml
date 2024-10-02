@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="common_dp_4">4dp</dimen>
+    <dimen name="common_dp_10">10dp</dimen>
+    <dimen name="common_dp_40">40dp</dimen>
+
+
+    <dimen name="common_sp_14">14sp</dimen>
+
+    <dimen name="common_status_bar_height">0dp</dimen>
+</resources>

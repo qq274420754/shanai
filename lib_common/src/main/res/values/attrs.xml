@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="common_LoadingView">
+        <attr name="common_loading_renderer">
+            <!--circle rotate-->
+            <enum name="MaterialLoadingRenderer" value="0"/>
+            <enum name="LevelLoadingRenderer" value="1"/>
+            <enum name="WhorlLoadingRenderer" value="2"/>
+            <enum name="GearLoadingRenderer" value="3"/>
+            <!--circle jump-->
+            <enum name="SwapLoadingRenderer" value="4"/>
+            <enum name="GuardLoadingRenderer" value="5"/>
+            <enum name="DanceLoadingRenderer" value="6"/>
+            <enum name="CollisionLoadingRenderer" value="7"/>
+            <!--Scenery-->
+            <enum name="DayNightLoadingRenderer" value="8"/>
+            <enum name="ElectricFanLoadingRenderer" value="9"/>
+            <!--Animal-->
+            <enum name="FishLoadingRenderer" value="10"/>
+            <enum name="GhostsEyeLoadingRenderer" value="11"/>
+            <!--Goods-->
+            <enum name="BalloonLoadingRenderer" value="12"/>
+            <enum name="WaterBottleLoadingRenderer" value="13"/>
+            <!--ShapeChange-->
+            <enum name="CircleBroodLoadingRenderer" value="14"/>
+            <enum name="CoolWaitLoadingRenderer" value="15"/>
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="CommonTabLayout">
+        <attr name="common_indicator_color" format="color" />
+        <attr name="common_indicator_height" format="dimension" />
+        <attr name="common_indicator_width" format="dimension" />
+        <attr name="common_indicator_margin_left" format="dimension" />
+        <attr name="common_indicator_margin_top" format="dimension" />
+        <attr name="common_indicator_margin_right" format="dimension" />
+        <attr name="common_indicator_margin_bottom" format="dimension" />
+        <attr name="common_indicator_corner_radius" format="dimension" />
+        <attr name="common_indicator_gravity" format="integer" />
+        <attr name="common_indicator_style" format="integer" />
+        <attr name="common_indicator_anim_enable" format="boolean" />
+        <attr name="common_indicator_anim_duration" format="integer" />
+        <attr name="common_indicator_bounce_enable" format="boolean" />
+        <attr name="common_underline_color" format="color" />
+        <attr name="common_underline_height" format="dimension" />
+        <attr name="common_underline_gravity" format="integer" />
+        <attr name="common_divider_color" format="color" />
+        <attr name="common_divider_width" format="dimension" />
+        <attr name="common_divider_padding" format="dimension" />
+        <attr name="common_tab_padding" format="dimension" />
+        <attr name="common_tab_space_equal" format="boolean" />
+        <attr name="common_tab_width" format="dimension" />
+        <attr name="common_textsize" format="dimension" />
+        <attr name="common_textSelectColor" format="color" />
+        <attr name="common_textUnselectColor" format="color" />
+        <attr name="common_textBold" format="integer" />
+        <attr name="common_textAllCaps" format="boolean" />
+        <attr name="common_iconWidth" format="dimension" />
+        <attr name="common_iconHeight" format="dimension" />
+        <attr name="common_iconVisible" format="boolean" />
+        <attr name="common_iconGravity" format="enum">
+            <enum name="LEFT" value="3" />
+            <enum name="TOP" value="48" />
+            <enum name="RIGHT" value="5" />
+            <enum name="BOTTOM" value="80" />
+        </attr>
+        <attr name="common_iconMargin" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="common_MsgView">
+        <attr name="common_backgroundColor" format="color" />
+        <attr name="common_cornerRadius" format="dimension" />
+        <attr name="common_strokeWidth" format="dimension" />
+        <attr name="common_strokeColor" format="color" />
+        <attr name="common_isRadiusHalfHeight" format="boolean" />
+        <attr name="common_isWidthHeightEqual" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="Common_SegmentTabLayout">
+        <attr name="common_indicator_color" />
+        <attr name="common_indicator_height" />
+        <attr name="common_indicator_margin_left" />
+        <attr name="common_indicator_margin_top" />
+        <attr name="common_indicator_margin_right" />
+        <attr name="common_indicator_margin_bottom" />
+        <attr name="common_indicator_corner_radius" />
+        <attr name="common_indicator_anim_enable" />
+        <attr name="common_indicator_anim_duration" />
+        <attr name="common_indicator_bounce_enable" />
+        <attr name="common_divider_color" />
+        <attr name="common_divider_width" />
+        <attr name="common_divider_padding" />
+        <attr name="common_tab_padding" />
+        <attr name="common_tab_space_equal" />
+        <attr name="common_tab_width" />
+        <attr name="common_textsize" />
+        <attr name="common_textSelectColor" />
+        <attr name="common_textUnselectColor" />
+        <attr name="common_textBold" />
+        <attr name="common_textAllCaps" />
+        <attr name="common_bar_color" format="color" />
+        <attr name="common_bar_stroke_color" format="color" />
+        <attr name="common_bar_stroke_width" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="Common_SlidingTabLayout">
+        <attr name="common_indicator_color" />
+        <attr name="common_indicator_height" />
+        <attr name="common_indicator_width" />
+        <attr name="common_indicator_margin_left" />
+        <attr name="common_indicator_margin_top" />
+        <attr name="common_indicator_margin_right" />
+        <attr name="common_indicator_margin_bottom" />
+        <attr name="common_indicator_corner_radius" />
+        <attr name="common_indicator_gravity" />
+        <attr name="common_indicator_style" />
+        <attr name="common_indicator_width_equal_title" />
+        <attr name="common_underline_color" />
+        <attr name="common_underline_height" />
+        <attr name="common_underline_gravity" />
+        <attr name="common_divider_color" />
+        <attr name="common_divider_width" />
+        <attr name="common_divider_padding" />
+        <attr name="common_tab_padding" />
+        <attr name="common_tab_space_equal" />
+        <attr name="common_tab_width" />
+        <attr name="common_textsize" />
+        <attr name="common_textSelectColor" />
+        <attr name="common_textUnselectColor" />
+        <attr name="common_textBold" />
+        <attr name="common_textAllCaps" />
+    </declare-styleable>
+
+    <declare-styleable name="common_EmptyView">
+        <attr name="common_iconSrc" format="reference" />
+        <attr name="common_titleText" format="string" />
+        <attr name="common_hintText" format="string" />
+        <attr name="common_buttonText" format="string" />
+    </declare-styleable>
+
+<!--    <declare-styleable name="common_NoLocation">-->
+<!--        <attr name="common_iconSrc" format="reference" />-->
+<!--        <attr name="common_titleText" format="string" />-->
+<!--        <attr name="common_hintText" format="string" />-->
+<!--        <attr name="common_buttonText" format="string" />-->
+<!--    </declare-styleable>-->
+
+</resources>

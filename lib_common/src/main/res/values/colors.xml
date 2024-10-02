@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  主题色  -->
+    <color name="common_theme">#00BCD4</color>
+    <color name="common_white">#FFFFFF</color>
+    <color name="common_black">#000000</color>
+    <color name="common_red">#ff0000</color>
+    <color name="common_textprimary">#333333</color>
+    <color name="common_textsecond">#afb2bb</color>
+    <color name="common_black_transparent10">#E6000000</color>
+    <color name="common_black_transparent20">#CC000000</color>
+    <color name="common_black_transparent30">#B3000000</color>
+    <color name="common_black_transparent40">#99000000</color>
+    <color name="common_black_transparent50">#80000000</color>
+    <color name="common_black_transparent60">#66000000</color>
+    <color name="common_black_transparent70">#4D000000</color>
+    <color name="common_black_transparent80">#33000000</color>
+    <color name="common_black_transparent90">#1A000000</color>
+    <color name="common_text_FF111111">#FF111111</color>
+    <color name="common_text_FF222222">#FF222222</color>
+    <color name="common_text_FF333333">#FF333333</color>
+    <color name="common_text_FF444444">#FF444444</color>
+    <color name="common_text_FF555555">#FF666666</color>
+    <color name="common_text_FF777777">#FF777777</color>
+    <color name="common_text_FF888888">#FF888888</color>
+    <color name="common_text_ff999999">#FF999999</color>
+    <color name="common_text_101010">#EDEDED</color>
+    <color name="common_background">#f1f1f1</color>
+    <color name="common_colorRefresh">#eb7b00</color>
+    <color name="common_tran">#00FFFFFF</color>
+    <color name="common_gentleman">#85FFF5</color>
+    <color name="common_lady">#FFA9F0</color>
+    <color name="common_colorprimary">#FDE523</color>
+    <color name="common_backgroudprimary">#eef1fa</color>
+
+
+</resources>

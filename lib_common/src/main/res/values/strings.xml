@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_appname">闪爱</string>
+    <string name="common_tab_friend">交友</string>
+    <string name="common_tab_trend">娱乐</string>
+    <string name="common_tab_videochat">视频聊</string>
+    <string name="common_tab_messge">消息</string>
+    <string name="common_tab_me">我</string>
+</resources>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <!-- 静态导入 StateLayoutEnum -->
+        <import type="com.shanai.base.utils.StateLayoutEnum"/>
+        <import type="android.view.View"/>
+        <!-- 这里定义变量 -->
+        <variable
+            name="friendlistinfo"
+            type="com.shanai.module.home.ui.fragment.FriendContentVM" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.shanai.shanai.common.view.EmptyView
+            android:id="@+id/errorView"
+            android:visibility="@{friendlistinfo.stateViewLD == StateLayoutEnum.ERROR ? View.VISIBLE : View.GONE}"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.shanai.shanai.common.view.EmptyView
+            android:id="@+id/emptyview"
+            android:visibility="@{friendlistinfo.stateViewLD == StateLayoutEnum.NO_DATA ? View.VISIBLE : View.GONE}"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ProgressBar
+            android:visibility="@{friendlistinfo.stateViewLD == StateLayoutEnum.LOADING ? View.VISIBLE : View.GONE}"
+            android:id="@+id/progress_bar_webinfo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerInParent="true"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/common_colorprimary"
+            android:indeterminateTintMode="src_atop" />
+
+        <com.scwang.smart.refresh.layout.SmartRefreshLayout
+            android:visibility="@{friendlistinfo.stateViewLD == StateLayoutEnum.HIDE ? View.VISIBLE : View.GONE}"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/common_backgroudprimary"
+            android:id="@+id/refreshLayout"
+            tools:context=".ui.fragment.FriendContentFragment">
+            <com.scwang.smart.refresh.header.ClassicsHeader
+                android:id="@+id/classicsheader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/friendcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+        </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+
+    </RelativeLayout>
+</layout>

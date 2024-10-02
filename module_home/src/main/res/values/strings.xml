@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 其他中文字符串 -->
+    <string name="home_agree_and_continue">同意并继续</string>
+    <string name="home_disagree">不同意</string>
+</resources>
