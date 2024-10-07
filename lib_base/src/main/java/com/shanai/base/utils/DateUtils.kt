@@ -29,7 +29,7 @@ import java.util.*
  * |z	|时区	               | General time zone | Pacific Standard Time; PST; GMT-08:00|
  * |Z	|时区	               | RFC 822 time zone | -0800                                |
  * ￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣
- * @author Qu Yunshuo
+ * @author LZM
  * @since 2020/9/8
  */
 object DateUtils {

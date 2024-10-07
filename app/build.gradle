@@ -6,21 +6,20 @@
 import com.shanai.buildsrc.*
 import org.jetbrains.kotlin.com.intellij.openapi.application.ApplicationInfo
 
-plugins {
-    alias(libs.plugins.application)
-    alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.hilt)
-    id "kotlin-kapt"
-}
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+//apply plugin: 'com.alibaba.arouter'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'dagger.hilt.android.plugin'
 
 android {
     //签名信息定义
     signingConfigs {
         shanai {
-            keyAlias 'nuanai'
-            keyPassword 'yl821212'
-            storeFile file('../nuanai.jks')
-            storePassword 'yl821212'
+            keyAlias 'shanai'
+            keyPassword 'shanai123'
+            storeFile file('../shanai.jks')
+            storePassword 'shanai123'
         }
     }
 
@@ -49,14 +48,6 @@ android {
         viewBinding = true
         dataBinding  = true
     }
-//    signingConfigs {
-//        releaseConfig {
-//            storeFile file('')
-//            storePassword ""
-//            keyAlias ""
-//            keyPassword ""
-//        }
-//    }
 
     buildTypes {
         // 对应 ALPHA 版本
@@ -194,6 +185,9 @@ dependencies {
     if (!ProjectBuildConfig.isAppMode) {
         // 有业务组件时 把这个去掉 这里只是为了使用base里的依赖库
         implementation project(path: ':module_home')
+        implementation project(path: ':module_main')
+        implementation project(path: ':module_me')
+        implementation project(path: ':module_account')
     } else {
         implementation project(path: ':lib_common')
     }

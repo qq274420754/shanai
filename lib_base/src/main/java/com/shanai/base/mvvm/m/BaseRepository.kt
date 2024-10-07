@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.flowOn
 /**
  * 仓库层 Repository 基类
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 8/27/20
  */
 open class BaseRepository {

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <!-- 这里定义变量 -->
+        <variable
+            name="verifycodedata"
+            type="com.shanai.account.activity.AccountVerifyCodeVM" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/activity_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:padding="5dp"
+            android:src="@drawable/common_top_back_icon_n"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+        <TextView
+            android:id="@+id/tv_codetips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="46dp"
+            android:layout_marginLeft="24dp"
+            android:text="请输入验证码"
+            android:textStyle="bold"
+            android:textColor="@color/common_textprimary"
+            android:textSize="24sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_back"/>
+
+
+        <TextView
+            android:id="@+id/tv_codetitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="已发送至+86 18688746623"
+            android:textColor="@color/common_text_ffd4d4d4"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_codetips"
+            app:layout_constraintLeft_toLeftOf="@+id/tv_codetips" />
+
+
+        <com.shanai.shanai.common.view.vcview.VerificationCodeView
+            android:id="@+id/verifycodeview"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_codetitle"
+            app:common_vcv_et_number="4"
+            app:common_vcv_et_inputType="number"
+            app:common_vcv_et_width="50dp"
+            app:common_vcv_et_height="64dp"
+            app:common_vcv_et_text_color="@android:color/black"
+            app:common_vcv_et_text_size="8sp"
+            app:common_vcv_et_bg="@drawable/common_et_logincode"
+            app:common_vcv_et_cursor="@drawable/common_etcurson"
+            app:common_vcv_et_cursor_visible="false"
+            app:common_vcv_et_spacing="24dp" />
+
+        <Button
+            android:id="@+id/tv_codecommit"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/account_getcode_bg"
+            android:gravity="center"
+            android:text="重新获取"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/verifycodeview"/>
+        
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

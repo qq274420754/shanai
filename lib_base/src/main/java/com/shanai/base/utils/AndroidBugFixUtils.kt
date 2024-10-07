@@ -10,7 +10,7 @@ import java.lang.reflect.Field
 /**
  * 解决 Android 自身的 Bug
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 2020/10/22
  */
 class AndroidBugFixUtils {

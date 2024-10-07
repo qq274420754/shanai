@@ -6,7 +6,7 @@ import android.content.Context
 /**
  * Application 生命周期 用于初始化各个组件
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 4/23/21 5:22 PM
  */
 interface ApplicationLifecycle {

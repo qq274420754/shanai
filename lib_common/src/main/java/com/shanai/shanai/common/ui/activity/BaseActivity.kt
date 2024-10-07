@@ -11,7 +11,7 @@ import com.shanai.base.utils.BarUtils
 /**
  * Activity基类
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 8/27/20
  */
 abstract class BaseActivity<VB : ViewBinding, VM : BaseViewModel> : BaseFrameActivity<VB, VM>() {

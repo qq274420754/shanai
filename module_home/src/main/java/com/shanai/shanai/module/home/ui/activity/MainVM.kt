@@ -5,8 +5,8 @@ import androidx.lifecycle.viewModelScope
 import com.google.gson.Gson
 import com.shanai.base.mvvm.vm.BaseViewModel
 import com.shanai.base.utils.SpUtils
+import com.shanai.common.constant.SpKey.KEY_SYSPARAM_CACHE
 import com.shanai.shanai.common.model.SysParamBean
-import com.shanai.shanai.module.home.constant.MMKVKeys.KEY_SYSPARAM_CACHE
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.catch
@@ -18,7 +18,7 @@ import javax.inject.Inject
  *
  * @property mRepository HomeRepository 仓库层 通过Hilt注入
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 5/25/21 5:41 PM
  */
 @HiltViewModel

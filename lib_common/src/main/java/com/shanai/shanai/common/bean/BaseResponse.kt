@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 /**
  * 公共Response
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 2021/8/5 11:33 下午
  */
 data class BaseResponse<D>(

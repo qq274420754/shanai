@@ -10,7 +10,7 @@ import javax.inject.Inject
 /**
  *
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 5/25/21 5:42 PM
  */
 class SplashRepo @Inject constructor() : BaseRepository() {

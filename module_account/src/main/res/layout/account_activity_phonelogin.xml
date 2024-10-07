@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <!-- 这里定义变量 -->
+        <variable
+            name="accountphonedata"
+            type="com.shanai.account.activity.AccountPhoneLoginVM" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/activity_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <!-- titlebar -->
+        <LinearLayout
+            android:id="@+id/ll_title"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:padding="5dp"
+                android:src="@drawable/common_close_b" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="8dp"
+                android:onClick="@{() -> accountphonedata.onSwitchModeClicked()}"
+                android:padding="5dp"
+                android:text="账号密码登录"
+                android:textColor="@color/common_textprimary"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_codetips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="46dp"
+            android:text="Hello"
+            android:textColor="@color/common_textprimary"
+            android:textSize="26sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_title" />
+
+        <ImageView
+            android:id="@+id/iv_codetitle"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:src="@mipmap/account_hellow"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_codetips"
+            app:layout_constraintLeft_toRightOf="@+id/tv_codetips"
+            app:layout_constraintTop_toTopOf="@+id/tv_codetips" />
+
+        <TextView
+            android:id="@+id/tv_codetitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="欢迎来到闪爱"
+            android:textColor="@color/common_textprimary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@+id/tv_codetips"
+            app:layout_constraintTop_toBottomOf="@+id/tv_codetips" />
+        <!-- Phone Input -->
+        <LinearLayout
+            android:id="@+id/ll_codephone"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/account_phone_r"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/tv_codetitle">
+
+            <TextView
+                android:id="@+id/tv_countrycode"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="17dp"
+                android:gravity="center"
+                android:text="+86"
+                android:textColor="@color/common_textprimary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="14dp"
+                android:background="@color/common_text_101010" />
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:digits="1234567890"
+                android:gravity="center_vertical"
+                android:hint="请输入手机号码"
+                android:inputType="number"
+                android:maxLength="11"
+                android:maxLines="1"
+                android:text="@{accountphonedata.phonenumber}"
+                android:textColor="#FF333333"
+                android:textColorHint="#FFBFBFBF"
+                android:textCursorDrawable="@null"
+                android:textSize="16dp"
+                tools:ignore="TextFields" />
+
+            <ImageView
+                android:id="@+id/iv_clean"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"
+                android:onClick="@{() -> accountphonedata.onCleanPhoneClicked()}"
+                android:padding="5dp"
+                android:src="@drawable/common_close_b"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/tv_codecommit"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/account_getcode_bg"
+            android:gravity="center"
+            android:onClick="@{() -> accountphonedata.onGetCodeClicked()}"
+            android:text="获取验证码"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/ll_codephone" />
+
+        <!--用户密码登录 组-->
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/verifylogin_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="tv_codecommit,ll_codephone,tv_codetitle,iv_codetitle,tv_codetips" />
+
+
+        <TextView
+            android:id="@+id/tv_psdtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="60dp"
+            android:text="账号密码登录"
+            android:textColor="@color/common_textprimary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_title" />
+
+        <EditText
+            android:id="@+id/et_psdphone"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/account_phone_r"
+            android:digits="1234567890"
+            android:gravity="center_vertical"
+            android:hint="请输入手机号码"
+            android:inputType="number"
+            android:maxLength="11"
+            android:maxLines="1"
+            android:paddingLeft="24dp"
+            android:text="@{accountphonedata.phonenumber}"
+            android:textColor="#FF333333"
+            android:textColorHint="#FFBFBFBF"
+            android:textCursorDrawable="@drawable/common_etcurson"
+            android:textSize="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_psdtitle"
+            tools:ignore="TextFields" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_psdphone"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/account_phone_r"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_psdphone">
+
+
+            <EditText
+                android:id="@+id/et_psdpassword"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:digits="1234567890"
+                android:gravity="center_vertical"
+                android:hint="请输入密码"
+                android:inputType="textPassword"
+                android:maxLength="11"
+                android:maxLines="1"
+                android:paddingLeft="24dp"
+                android:text="@{accountphonedata.psdnumber}"
+                android:textColor="#FF333333"
+                android:textColorHint="#FFBFBFBF"
+                android:textCursorDrawable="@drawable/common_etcurson"
+                android:textSize="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_psdphone"
+                tools:ignore="TextFields" />
+
+            <ImageView
+                android:id="@+id/iv_psdsee"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:onClick="@{() -> accountphonedata.onCleanPsdClicked()}"
+                android:padding="5dp"
+                android:src="@drawable/common_close_b"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/iv_psdvisibility"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="10dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/common_pwd_invisibility"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_psdforget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="12dp"
+            android:text="忘记密码"
+            android:textColor="@color/common_black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_psdphone" />
+
+        <Button
+            android:id="@+id/tv_psdcommit"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/account_getcode_bg"
+            android:gravity="center"
+            android:onClick="@{() -> accountphonedata.onPsdCommitClicked()}"
+            android:text="立即登录"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_psdforget" />
+
+        <!--用户密码登录 组-->
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/psdlogin_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="tv_psdtitle,et_psdphone,tv_psdforget,tv_psdcommit,ll_psdphone" />
+
+
+        <RelativeLayout
+            android:id="@+id/layout_useagreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="24dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_psdcommit">
+
+            <CheckBox
+                android:id="@+id/cb_hint"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:button="@drawable/demandphocheckbox_style"
+                android:checked="@{accountphonedata.isAgree}" />
+
+            <com.shanai.shanai.common.view.AlxUrlTextView
+                android:id="@+id/tv_useagreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/cb_hint"
+                android:autoLink="web"
+                android:enabled="true"
+                android:gravity="center_vertical"
+                android:text="@{accountphonedata.privacyPolicyText}"
+                android:textColor="@color/common_text_ff999999"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

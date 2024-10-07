@@ -3,7 +3,7 @@ package com.shanai.base.utils.network
 /**
  * 网络类型的枚举
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 2021/8/22 10:35 下午
  */
 enum class NetworkTypeEnum {

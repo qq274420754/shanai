@@ -6,7 +6,7 @@ package com.shanai.base.utils
  * @see ForegroundBackgroundObserver
  * @see ForegroundBackgroundSubject
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 2023/5/31 14:22
  */
 object ForegroundBackgroundHelper : ForegroundBackgroundSubject {
@@ -64,7 +64,7 @@ object ForegroundBackgroundHelper : ForegroundBackgroundSubject {
 /**
  * 订阅者需要实现的接口
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 2023/5/31 14:23
  */
 interface ForegroundBackgroundObserver {
@@ -74,7 +74,7 @@ interface ForegroundBackgroundObserver {
 /**
  * 被观察者抽象主题
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 2023/5/31 14:24
  */
 interface ForegroundBackgroundSubject {

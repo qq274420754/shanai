@@ -1,0 +1,9 @@
+//import com.shanai.buildsrc.ProjectBuildConfig
+
+
+apply from: '../base_module.gradle'
+
+android {
+    resourcePrefix "main_"
+    namespace 'com.shanai.module.main'
+}

@@ -8,16 +8,24 @@ package com.shanai.common.constant
  */
 object RouteUrl{
 
-    const val SPLASH = "/app/splash"
-    const val MAIN = "/app/main"
-    const val WEB = "/app/web"
+    //home模块下
+    const val SPLASH = "/home/app/splash"
+    const val MAIN = "/home/app/main"
+    const val WEB = "/home/app/web"
 
-    const val FRIEND_F = "/fragment/friend"
-    const val TREND_F = "/fragment/trend"
-    const val VIDEOCHAT_F = "/fragment/videochat"
-    const val MESSAGE_F = "/fragment/message"
-    const val ME_F = "/fragment/me"
-    const val FRIEND_CONTENT_F = "/fragment/friend/content"
+    const val FRIEND_F = "/home/fragment/friend"
+    const val TREND_F = "/home/fragment/trend"
+    const val VIDEOCHAT_F = "/home/fragment/videochat"
+    const val MESSAGE_F = "/home/fragment/message"
+    const val FRIEND_CONTENT_F = "/home/fragment/friendcontent"
+
+    //account 模块下
+    const val PHONELOGIN = "/account/app/phonelogin"
+    const val PHONEVERIFYCODE = "/account/app/phoneverifycode"
+
+    //me 模块下
+    const val ME_F = "/me/fragment/me"
+
 
     const val LOGIN = "/app/login"
     const val PROFILE = "/app/profile"

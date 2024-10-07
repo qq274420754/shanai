@@ -9,7 +9,7 @@ import java.util.*
  * 加载组件代理类
  * 组件初始化的工作将由该代理类代理实现
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 4/23/21 5:37 PM
  */
 class LoadModuleProxy : ApplicationLifecycle {

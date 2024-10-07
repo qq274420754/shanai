@@ -12,8 +12,8 @@ object RouteKey{
     const val MAIN_PAGE = "main_page"
     const val WEB_PAGE = "web_page"
 
-    const val LOGIN_PAGE = "login_page"
-    const val SETTINGS_PAGE = "settings_page"
+    const val PHONELOGIN_PAGE = "phonelogin_page"
+    const val PHONE_VERIFYCODE_PAGE = "phone_verifycode_page"
 
     const val FRIEND_FRAGMENT = "friend_fragment"
     const val TREND_FRAGMENT = "trend_fragment"
@@ -26,6 +26,8 @@ object RouteKey{
         const val DEFAULT_TAB = "default_tab"
         const val WEB_URL = "web_url"
         const val KEY_FRIEND_CONTENT_TYPE = "friend_content_type"
+
+        const val KEY_LOGIN_PHONENUMBER = "login_phonenumber"
 
     }
 }

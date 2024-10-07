@@ -3,12 +3,12 @@ package com.shanai.buildsrc
 /**
  * 项目相关参数配置
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 4/24/21 5:56 PM
  */
 object ProjectBuildConfig {
     const val compileSdkVersion = 34
-    const val applicationId = "com.shanai.shanai"
+    const val applicationId = "com.mm.shanai"
     const val minSdkVersion = 21
     const val targetSdkVersion = 34
     const val versionCode = 1

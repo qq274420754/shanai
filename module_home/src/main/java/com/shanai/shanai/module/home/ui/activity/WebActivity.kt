@@ -15,7 +15,7 @@ import com.tencent.smtt.sdk.WebView
 import com.tencent.smtt.sdk.WebViewClient
 import dagger.hilt.android.AndroidEntryPoint
 
-//@Route(name = RouteKey.WEB_PAGE, path = RouteUrl.WEB)
+@Route(name = RouteKey.WEB_PAGE, path = RouteUrl.WEB)
 @AndroidEntryPoint
 class WebActivity : BaseActivity<HomeActivityWebBinding, WebVM>(){
 

@@ -15,7 +15,7 @@ import kotlin.system.measureTimeMillis
 /**
  * Application 基类
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 4/24/21 5:30 PM
  */
 

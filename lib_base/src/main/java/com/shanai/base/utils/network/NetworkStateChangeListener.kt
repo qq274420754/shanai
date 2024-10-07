@@ -3,7 +3,7 @@ package com.shanai.base.utils.network
 /**
  * 网络状态改变监听起
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 2021/7/11 4:56 下午
  */
 interface NetworkStateChangeListener {

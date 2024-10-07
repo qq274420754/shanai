@@ -12,7 +12,7 @@ import org.greenrobot.eventbus.EventBus
 /**
  * App壳
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 4/23/21 6:08 PM
  */
 @HiltAndroidApp

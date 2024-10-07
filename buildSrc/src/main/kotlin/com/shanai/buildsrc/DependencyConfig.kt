@@ -3,7 +3,7 @@ package com.shanai.buildsrc
 /**
  * 项目依赖版本统一管理
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 4/24/21 4:00 PM
  */
 object DependencyConfig {
@@ -11,7 +11,7 @@ object DependencyConfig {
     /**
      * 依赖版本号
      *
-     * @author Qu Yunshuo
+     * @author LZM
      * @since 4/24/21 4:01 PM
      */
     object Version {
@@ -76,7 +76,7 @@ object DependencyConfig {
     /**
      * AndroidX相关依赖
      *
-     * @author Qu Yunshuo
+     * @author LZM
      * @since 4/24/21 4:01 PM
      */
     object AndroidX {
@@ -95,7 +95,7 @@ object DependencyConfig {
     /**
      * Android相关依赖
      *
-     * @author Qu Yunshuo
+     * @author LZM
      * @since 4/24/21 4:02 PM
      */
     object Android {
@@ -107,7 +107,7 @@ object DependencyConfig {
     /**
      * JetPack相关依赖
      *
-     * @author Qu Yunshuo
+     * @author LZM
      * @since 4/24/21 4:02 PM
      */
     object JetPack {
@@ -128,7 +128,7 @@ object DependencyConfig {
     /**
      * Kotlin相关依赖
      *
-     * @author Qu Yunshuo
+     * @author LZM
      * @since 4/24/21 4:02 PM
      */
     object Kotlin {
@@ -142,7 +142,7 @@ object DependencyConfig {
     /**
      * GitHub及其他相关依赖
      *
-     * @author Qu Yunshuo
+     * @author LZM
      * @since 4/24/21 4:02 PM
      */
     object GitHub {
@@ -187,7 +187,7 @@ object DependencyConfig {
     /**
      * SDK相关依赖
      *
-     * @author Qu Yunshuo
+     * @author LZM
      * @since 4/24/21 4:02 PM
      */
     object SDK {

@@ -8,7 +8,7 @@ import com.shanai.base.BaseApplication
 /**
  * 剪切板工具类
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 2023/5/31 10:27
  */
 object ClipboardUtils {

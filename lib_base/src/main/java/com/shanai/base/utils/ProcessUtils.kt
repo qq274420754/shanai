@@ -9,7 +9,7 @@ import kotlin.jvm.Throws
 /**
  * 进程工具类
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 3/16/21 9:06 AM
  */
 object ProcessUtils {

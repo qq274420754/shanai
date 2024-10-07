@@ -4,16 +4,16 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.tcssj.mbjmb",
+  "applicationId": "com.mm.shanai",
   "variantName": "huaweiRelease",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "versionCode": 12,
-      "versionName": "12.0.0",
-      "outputFile": "com.tcssj.mbjmb_12(12.0.0)_release.apk"
+      "versionCode": 1,
+      "versionName": "1.0.0",
+      "outputFile": "com.mm.shanai_1(1.0.0)_release.apk"
     }
   ],
   "elementType": "File"

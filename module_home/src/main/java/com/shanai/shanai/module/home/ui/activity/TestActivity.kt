@@ -44,7 +44,7 @@ import com.tencent.smtt.sdk.WebViewClient
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
-@Route(name = RouteKey.WEB_PAGE, path = RouteUrl.WEB)
+//@Route(name = RouteKey.WEB_PAGE, path = RouteUrl.WEB)
 @AndroidEntryPoint
 class TestActivity : BaseActivity<HomeActivityTestBinding, TestVM>(){
 

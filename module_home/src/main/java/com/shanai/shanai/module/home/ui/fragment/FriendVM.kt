@@ -9,9 +9,9 @@ import com.shanai.base.utils.SpUtils
 import com.shanai.base.utils.status.ViewStatusHelper
 import com.shanai.common.constant.RouteKey.Params.KEY_FRIEND_CONTENT_TYPE
 import com.shanai.common.constant.RouteUrl
+import com.shanai.common.constant.SpKey.KEY_SYSPARAM_CACHE
 import com.shanai.shanai.common.model.FriendListBean
 import com.shanai.shanai.common.model.SysParamBean
-import com.shanai.shanai.module.home.constant.MMKVKeys.KEY_SYSPARAM_CACHE
 import com.shanai.shanai.module.home.constant.MainTabKey.FRIEND_CONTENT_KEY
 import com.shanai.shanai.module.home.entity.FriendTopBannerBean
 import com.shanai.shanai.module.home.entity.FriendTopMenuItem

@@ -1,0 +1,13 @@
+import com.shanai.buildsrc.DependencyConfig
+import com.shanai.buildsrc.ProjectBuildConfig
+
+
+apply from: '../base_module.gradle'
+
+android {
+
+    resourcePrefix "account_"
+    namespace 'com.shanai.module.account'
+
+}
+

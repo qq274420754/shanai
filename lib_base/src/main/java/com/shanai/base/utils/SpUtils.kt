@@ -6,7 +6,7 @@ import com.tencent.mmkv.MMKV
 /**
  * MMKV使用封装
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 8/28/20
  */
 object SpUtils {

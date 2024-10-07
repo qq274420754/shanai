@@ -10,7 +10,7 @@ import retrofit2.http.Path
 /**
  * Home模块的接口
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 6/4/21 5:51 PM
  */
 interface FriendApiService {

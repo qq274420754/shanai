@@ -17,7 +17,7 @@ import me.jessyan.autosize.AutoSizeCompat
 /**
  * Activity基类
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 8/27/20
  */
 abstract class BaseFrameActivity<VB : ViewBinding, VM : BaseViewModel> : AppCompatActivity(),

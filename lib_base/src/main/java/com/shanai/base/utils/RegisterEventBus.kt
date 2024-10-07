@@ -40,7 +40,7 @@ package com.shanai.base.utils
  * class SampleActivity : BaseActivity()
  * ```
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 2020/8/29
  */
 @Target(AnnotationTarget.CLASS)

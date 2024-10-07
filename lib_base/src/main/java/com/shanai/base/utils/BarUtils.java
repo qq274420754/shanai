@@ -53,7 +53,7 @@ import com.shanai.base.BaseApplication;
  * setNavBarLightMode                   : 设置导航栏是否为浅色模式
  * isNavBarLightMode                    : 判断导航栏是否为浅色模式
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 2021/7/15 10:42 上午
  */
 public final class BarUtils {

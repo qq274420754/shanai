@@ -23,7 +23,7 @@ import com.tencent.smtt.sdk.QbSdk.PreInitCallback
 /**
  * 项目相关的Application
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 4/16/21 3:37 PM
  */
 @AutoService(ApplicationLifecycle::class)

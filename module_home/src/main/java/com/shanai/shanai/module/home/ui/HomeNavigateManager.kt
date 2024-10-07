@@ -16,13 +16,6 @@ class HomeNavigateManager {
                 .withString(RouteKey.Params.DEFAULT_TAB, defaulttab)
                 .navigation()
         }
-
-        fun navigateToWeb(url:String) {
-            ARouter.getInstance()
-                .build(RouteUrl.WEB)
-                .withString(RouteKey.Params.WEB_URL, url)
-                .navigation()
-        }
     }
 
 

@@ -7,7 +7,7 @@ import com.shanai.base.mvvm.vm.BaseViewModel
 /**
  * Fragment基类
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 8/27/20
  */
 abstract class BaseFragment<VB : ViewBinding, VM : BaseViewModel> : BaseFrameFragment<VB, VM>()

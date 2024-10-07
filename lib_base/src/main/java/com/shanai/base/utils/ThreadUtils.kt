@@ -6,7 +6,7 @@ import android.os.Looper
 /**
  * 线程相关工具类
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 2023/3/12 19:29
  */
 object ThreadUtils {

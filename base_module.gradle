@@ -4,6 +4,17 @@
 
 import com.shanai.buildsrc.*
 
+if (ProjectBuildConfig.isAppMode) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'dagger.hilt.android.plugin'
+
+
 android {
     compileSdk ProjectBuildConfig.compileSdkVersion
 
@@ -91,11 +102,11 @@ dependencies {
     implementation DependencyConfig.JetPack.Room
     implementation DependencyConfig.JetPack.RoomKtx
 
+    kapt DependencyConfig.GitHub.ARouteCompiler
     kapt DependencyConfig.GitHub.EventBusAPT
     kapt DependencyConfig.GitHub.AutoServiceApt
     kapt DependencyConfig.JetPack.HiltApt
     kapt DependencyConfig.JetPack.RoomApt
     kapt DependencyConfig.JetPack.LifecycleCompilerAPT
-    kapt DependencyConfig.GitHub.ARouteCompiler
 
 }

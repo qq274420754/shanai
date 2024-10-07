@@ -3,7 +3,7 @@ package com.shanai.base.utils
 /**
  * 状态视图的状态枚举
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 2021/7/10 9:16 上午
  */
 public enum class StateLayoutEnum {

@@ -8,7 +8,7 @@ import kotlin.jvm.Throws
 /**
  * ViewModel 基类
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 8/27/20
  */
 abstract class BaseViewModel : ViewModel() {

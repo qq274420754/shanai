@@ -22,15 +22,18 @@ import com.shanai.base.ktx.observeLiveData
 import com.shanai.base.utils.SpUtils
 import com.shanai.common.constant.RouteKey
 import com.shanai.common.constant.RouteUrl
+import com.shanai.common.constant.SpKey.KEY_ISAGREE_PRIVACYALERT
+import com.shanai.common.constant.SpKey.KEY_PRIVACY_URL
+import com.shanai.common.constant.SpKey.KEY_PROTOCOL_URL
+import com.shanai.common.constant.SpKey.KEY_SPLASH_BG
+import com.shanai.common.constant.SpKey.KEY_SYSPARAM_CACHE
 import com.shanai.common.ui.activity.BaseActivity
 import com.shanai.module.home.R
 import com.shanai.module.home.databinding.HomeActivitySplashBinding
 import com.shanai.shanai.module.home.ui.activity.SplashVM
 import com.shanai.shanai.common.model.PrivacyAgreement
 import com.shanai.shanai.common.model.SysParamBean
-import com.shanai.shanai.module.home.constant.MMKVKeys.KEY_ISAGREE_PRIVACYALERT
-import com.shanai.shanai.module.home.constant.MMKVKeys.KEY_SPLASH_BG
-import com.shanai.shanai.module.home.constant.MMKVKeys.KEY_SYSPARAM_CACHE
+import com.shanai.shanai.common.ui.CommonNavigateManager
 import com.shanai.shanai.module.home.constant.MainTabKey
 import com.shanai.shanai.module.home.ui.HomeNavigateManager
 import dagger.hilt.android.AndroidEntryPoint
@@ -92,6 +95,9 @@ class SplashActivity : BaseActivity<HomeActivitySplashBinding, SplashVM>(){
                 }
             })
             .into(mBinding.backgroundImage)
+
+        SpUtils.putString(KEY_PROTOCOL_URL,privacyAgreement.protocolUrl)
+        SpUtils.putString(KEY_PRIVACY_URL,privacyAgreement.privacyPolicyUrl)
 
         mBinding.tvWelcome.text = privacyAgreement.title
         mBinding.tvContent.text = getClickableHtml(privacyAgreement.protocolPrivacyAlert)
@@ -171,7 +177,7 @@ class SplashActivity : BaseActivity<HomeActivitySplashBinding, SplashVM>(){
         private val mUrl = url
         override fun onClick(widget: View) {
             // 处理点击事件
-            HomeNavigateManager.navigateToWeb(mUrl)
+            CommonNavigateManager.navigateToWeb(mUrl)
         }
 
         override fun updateDrawState(ds: TextPaint) {

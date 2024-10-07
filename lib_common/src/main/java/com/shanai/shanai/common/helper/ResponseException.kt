@@ -9,7 +9,7 @@ import com.shanai.shanai.common.helper.ResponseExceptionEnum as ExceptionType
  * @property type ResponseExceptionEnum 异常类型枚举，用于标记该异常的类型
  * @param msg String 异常信息
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 2021/7/9 2:57 下午
  */
 class ResponseException(val type: ExceptionType, val msg: String) : Exception()
@@ -17,7 +17,7 @@ class ResponseException(val type: ExceptionType, val msg: String) : Exception()
 /**
  * 空异常，表示该异常已经被处理过了，不需要再做额外处理了
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 2021/7/9 3:11 下午
  */
 class ResponseEmptyException : Exception()

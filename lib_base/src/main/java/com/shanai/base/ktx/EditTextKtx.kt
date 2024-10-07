@@ -6,7 +6,7 @@ import android.widget.EditText
 /**
  * EditText相关扩展方法
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 2020/9/17
  */
 

@@ -12,7 +12,7 @@ import com.shanai.base.BaseApplication
 /**
  * App 相关工具类
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @sine 2023/2/13 23:15
  */
 class AppUtils {

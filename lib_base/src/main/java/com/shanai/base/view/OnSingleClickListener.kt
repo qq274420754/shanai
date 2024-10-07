@@ -8,7 +8,7 @@ import android.view.View
  * @param mDelayTime Int 防抖间隔时间，单位是毫秒，默认值 500ms
  * @param mListener (v: View) -> Unit 具体的点击事件
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 2023/3/15 23:39
  */
 class OnSingleClickListener(

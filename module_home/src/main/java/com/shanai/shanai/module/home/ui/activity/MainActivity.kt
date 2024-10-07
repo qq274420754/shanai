@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import com.alibaba.android.arouter.facade.annotation.Autowired
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
-import com.gyf.immersionbar.ImmersionBar
 import com.gyf.immersionbar.ktx.immersionBar
 import com.shanai.base.ktx.observeLiveData
 import com.shanai.common.constant.RouteKey
@@ -31,7 +30,7 @@ import dagger.hilt.android.AndroidEntryPoint
 /**
  * 首页
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 5/22/21 2:26 PM
  */
 @Route(name = RouteKey.MAIN_PAGE, path = RouteUrl.MAIN)
@@ -75,7 +74,13 @@ class MainActivity : BaseActivity<HomeActivityMainBinding, MainVM>() {
     override fun createVB() = HomeActivityMainBinding.inflate(layoutInflater)
 
     override fun HomeActivityMainBinding.initView() {
+        initListener()
+    }
 
+    private fun initListener() {
+        mBinding.llBindphonehint.setOnClickListener {
+            ARouter.getInstance().build(RouteUrl.PHONELOGIN).navigation()
+        }
     }
 
     override fun initObserve() {
@@ -109,7 +114,6 @@ class MainActivity : BaseActivity<HomeActivityMainBinding, MainVM>() {
             setTabData(mTabEntities as ArrayList<TabEntity>?)
             setOnTabSelectListener(object : OnTabSelectListener {
                 override fun onTabSelect(position: Int) {
-                    setStatusBarBackgroud(position);
                     mBinding.viewPager.setCurrentItem(position, false)
                     mBinding.bottomNavigation.setCurrentTab(position)
                 }
@@ -136,26 +140,6 @@ class MainActivity : BaseActivity<HomeActivityMainBinding, MainVM>() {
         return defaultValue
     }
 
-    fun setStatusBarBackgroud(tab:Int){
-        when(tab){
-            0 ->{
-                immersionBar {
-                    fitsSystemWindows(true)
-                    transparentStatusBar()
-                    navigationBarColor(R.color.common_white) }
-            }
-            1 ->{
-                immersionBar { fitsSystemWindows(true)
-                    transparentStatusBar()
-                    navigationBarColor(R.color.common_white) }
-            }
-            2 ->{
-                immersionBar { fitsSystemWindows(true)
-                    transparentStatusBar()
-                    navigationBarColor(R.color.common_white) }
-            }
-        }
 
-    }
 
 }

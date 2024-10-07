@@ -8,7 +8,7 @@ import android.net.NetworkCapabilities
 /**
  * 实时监听网络状态变化的[ConnectivityManager.NetworkCallback]实现类
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 2021/7/10 5:38 下午
  */
 class NetworkCallbackImpl : ConnectivityManager.NetworkCallback() {

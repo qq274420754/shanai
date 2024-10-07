@@ -3,7 +3,7 @@ package com.shanai.base.constant
 /**
  * 版本状态
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 4/20/21 9:05 AM
  */
 object VersionStatus {

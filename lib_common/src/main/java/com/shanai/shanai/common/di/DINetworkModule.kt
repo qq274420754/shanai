@@ -24,7 +24,7 @@ import javax.inject.Singleton
 /**
  * 全局作用域的网络层的依赖注入模块
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 6/4/21 8:58 AM
  */
 @Module

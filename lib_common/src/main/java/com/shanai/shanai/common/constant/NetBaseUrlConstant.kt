@@ -3,7 +3,7 @@ package com.shanai.common.constant
 /**
  * 接口公共地址
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 4/17/21 3:27 PM
  */
 internal object NetBaseUrlConstant {

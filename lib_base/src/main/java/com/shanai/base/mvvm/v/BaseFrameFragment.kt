@@ -15,7 +15,7 @@ import com.shanai.base.utils.ViewRecreateHelper
 /**
  * Fragment基类
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 8/27/20
  */
 abstract class BaseFrameFragment<VB : ViewBinding, VM : BaseViewModel> : Fragment(),

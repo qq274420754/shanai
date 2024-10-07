@@ -10,7 +10,7 @@ import com.shanai.base.utils.ForegroundBackgroundHelper
 /**
  * Activity生命周期监听
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 4/20/21 9:10 AM
  */
 class ActivityLifecycleCallbacksImpl : Application.ActivityLifecycleCallbacks {

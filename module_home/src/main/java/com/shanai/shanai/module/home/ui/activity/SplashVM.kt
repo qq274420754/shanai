@@ -6,9 +6,9 @@ import com.google.gson.Gson
 import com.shanai.base.mvvm.vm.BaseViewModel
 import com.shanai.base.utils.SpUtils
 import com.shanai.base.utils.StateLayoutEnum
+import com.shanai.common.constant.SpKey.KEY_PRIVACY_CACHE
 import com.shanai.shanai.common.model.PrivacyAgreement
 import com.shanai.shanai.common.model.SysParamBean
-import com.shanai.shanai.module.home.constant.MMKVKeys.KEY_PRIVACY_CACHE
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.catch

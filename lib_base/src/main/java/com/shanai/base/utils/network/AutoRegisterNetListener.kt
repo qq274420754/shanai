@@ -8,7 +8,7 @@ import androidx.lifecycle.OnLifecycleEvent
  * 自动注册网络状态监听
  * 使用的是[androidx.lifecycle.LifecycleObserver]来同步生命周期
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 2021/7/11 4:56 下午
  */
 class AutoRegisterNetListener constructor(listener: NetworkStateChangeListener) :

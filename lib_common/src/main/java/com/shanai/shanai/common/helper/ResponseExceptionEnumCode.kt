@@ -3,7 +3,7 @@ package com.shanai.shanai.common.helper
 /**
  * 请求响应异常枚举的抽象
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 2021/7/9 2:56 下午
  */
 interface ResponseExceptionEnumCode {

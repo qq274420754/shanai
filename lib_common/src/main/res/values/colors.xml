@@ -24,6 +24,7 @@
     <color name="common_text_FF777777">#FF777777</color>
     <color name="common_text_FF888888">#FF888888</color>
     <color name="common_text_ff999999">#FF999999</color>
+    <color name="common_text_ffd4d4d4">#D4D4D4</color>
     <color name="common_text_101010">#EDEDED</color>
     <color name="common_background">#f1f1f1</color>
     <color name="common_colorRefresh">#eb7b00</color>

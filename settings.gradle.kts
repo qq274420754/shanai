@@ -37,7 +37,9 @@ include(
     ":app",
     ":lib_base",
     ":lib_common",
-    ":module_home"
+    ":module_home",
+    ":module_main",
+    ":module_me",
+    ":module_account"
 )
-include(":module-main")
-include(":module_me")
+

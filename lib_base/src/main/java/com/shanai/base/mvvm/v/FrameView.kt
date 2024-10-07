@@ -6,7 +6,7 @@ import androidx.viewbinding.ViewBinding
 /**
  * View层基类抽象
  *
- * @author Qu Yunshuo
+ * @author LZM
  * @since 10/13/20
  */
 interface FrameView<VB : ViewBinding> {
