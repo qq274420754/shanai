@@ -3,4 +3,5 @@
     <color name="base_colorPrimary">#6200EE</color>
     <color name="base_colorPrimaryDark">#3700B3</color>
     <color name="base_colorAccent">#03DAC5</color>
+    <color name="base_toast_text_color">#FFFFFFFF</color>
 </resources>

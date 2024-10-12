@@ -1,4 +1,6 @@
 <resources>
     <string name="base_network_disconnected">网路已断开</string>
     <string name="base_network_connected">网络已连接</string>
+    <string name="base_loading">加载中…</string>
+
 </resources>

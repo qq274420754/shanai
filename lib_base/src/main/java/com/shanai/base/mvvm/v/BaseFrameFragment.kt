@@ -11,6 +11,7 @@ import com.shanai.base.mvvm.vm.BaseViewModel
 import com.shanai.base.utils.RegisterEventBus
 import com.shanai.base.utils.EventBusUtils
 import com.shanai.base.utils.ViewRecreateHelper
+import com.shanai.base.view.actionsheet.ActionLoadingDialog
 
 /**
  * Fragment基类
@@ -87,4 +88,5 @@ abstract class BaseFrameFragment<VB : ViewBinding, VM : BaseViewModel> : Fragmen
         }
         super.onDestroy()
     }
+
 }

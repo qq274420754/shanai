@@ -146,7 +146,7 @@
                 android:background="@color/common_backgroudprimary"
                 app:layout_collapseMode="pin">
 
-                <com.shanai.shanai.common.view.magicindicator.MagicIndicator
+                <com.mm.shanai.common.view.magicindicator.MagicIndicator
                     android:id="@+id/friend_magic_indicator"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"

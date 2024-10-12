@@ -6,4 +6,8 @@
     <string name="common_tab_videochat">视频聊</string>
     <string name="common_tab_messge">消息</string>
     <string name="common_tab_me">我</string>
+
+    <string name="common_privacydialog_title">闪爱用户协议和隐私政策提示</string>
+    <string name="common_agree_and_continue">同意并继续</string>
+    <string name="common_disagree">不同意</string>
 </resources>

@@ -16,13 +16,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.shanai.shanai.common.view.EmptyView
+        <com.mm.shanai.common.view.EmptyView
             android:id="@+id/errorView"
             android:visibility="@{friendlistinfo.stateViewLD == StateLayoutEnum.ERROR ? View.VISIBLE : View.GONE}"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-        <com.shanai.shanai.common.view.EmptyView
+        <com.mm.shanai.common.view.EmptyView
             android:id="@+id/emptyview"
             android:visibility="@{friendlistinfo.stateViewLD == StateLayoutEnum.NO_DATA ? View.VISIBLE : View.GONE}"
             android:layout_width="match_parent"

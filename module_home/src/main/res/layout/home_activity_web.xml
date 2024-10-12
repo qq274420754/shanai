@@ -7,7 +7,7 @@
         <!-- 这里定义变量 -->
         <variable
             name="webContent"
-            type="com.shanai.shanai.module.home.ui.activity.WebVM" />
+            type="com.mm.shanai.module.home.ui.activity.WebVM" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

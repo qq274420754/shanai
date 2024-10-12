@@ -7,7 +7,7 @@
         <!-- 这里定义变量 -->
         <variable
             name="verifycodedata"
-            type="com.shanai.account.activity.AccountVerifyCodeVM" />
+            type="com.mm.shanai.module.account.ui.activity.AccountVerifyCodeVM" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -54,7 +54,7 @@
             app:layout_constraintLeft_toLeftOf="@+id/tv_codetips" />
 
 
-        <com.shanai.shanai.common.view.vcview.VerificationCodeView
+        <com.mm.shanai.common.view.vcview.VerificationCodeView
             android:id="@+id/verifycodeview"
             android:layout_width="match_parent"
             android:layout_height="66dp"

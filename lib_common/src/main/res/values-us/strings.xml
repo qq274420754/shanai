@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_appname">shanai</string>
+    <string name="common_tab_friend">friend</string>
+    <string name="common_tab_trend">recreation</string>
+    <string name="common_tab_videochat">Video chat</string>
+    <string name="common_tab_messge">message</string>
+    <string name="common_tab_me">me</string>
+
+    <string name="common_privacydialog_title">Flash Love User Agreement and Privacy Policy Tips</string>
+    <string name="common_agree_and_continue">Agree and continue</string>
+    <string name="common_disagree">Not agree and quit</string>
+</resources>

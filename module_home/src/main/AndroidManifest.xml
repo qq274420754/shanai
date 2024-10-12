@@ -3,7 +3,7 @@
 
     <application>
         <activity
-            android:name=".ui.activity.SplashActivity"
+            android:name="com.mm.shanai.module.home.ui.activity.SplashActivity"
             android:screenOrientation="portrait"
             android:exported="true"
             android:theme="@style/Home_Theme.AppLauncher">
@@ -12,22 +12,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--  Main 首页  -->
+
         <activity
-            android:name=".ui.activity.MainActivity"
+            android:name="com.mm.shanai.module.home.ui.activity.WebActivity"
             android:exported="false"
             android:screenOrientation="portrait">
         </activity>
-        <activity
-            android:name=".ui.activity.WebActivity"
-            android:exported="false"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity
-            android:name=".ui.activity.TestActivity"
-            android:exported="false"
-            android:screenOrientation="portrait">
-        </activity>
+
     </application>
 
 </manifest>

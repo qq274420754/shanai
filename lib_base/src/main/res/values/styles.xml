@@ -8,4 +8,26 @@
         <item name="colorAccent">@color/base_colorAccent</item>
     </style>
 
+    <style name="base_ActionLoadingDialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否悬浮在activity上   false: dialog 布满整个屏幕， true，显示指定大小-->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题   false 的时候，在没有给定title的情况下，会比true的情况显示要长（title显示了，没有内容而已），-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 背景颜色-->
+        <item name="android:backgroundDimEnabled">false</item>
+        <!-- 模糊 false： 整个界面不会有遮罩层-->
+        <item name="android:backgroundDimAmount">0.6</item>
+        <!-- 灰度  当android:backgroundDimEnabled=true时，这个参数才有用，值越大，遮罩层颜色越深。-->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <!-- 弹出或者进入时的动画效果 -->
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 对话框是否有遮盖 -->
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <!-- 背景缓存颜色 -->
+    </style>
 </resources>

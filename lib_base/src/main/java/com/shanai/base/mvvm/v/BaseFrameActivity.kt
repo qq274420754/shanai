@@ -1,17 +1,23 @@
 package com.shanai.base.mvvm.v
 
+import android.content.Context
 import android.content.res.Resources
 import android.os.Bundle
 import android.os.Looper
+import android.view.View
+import android.view.inputmethod.InputMethodManager
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewbinding.ViewBinding
 import com.alibaba.android.arouter.launcher.ARouter
+import com.permissionx.guolindev.PermissionX
 import com.shanai.base.R
 import com.shanai.base.mvvm.vm.BaseViewModel
 import com.shanai.base.utils.*
 import com.shanai.base.utils.network.AutoRegisterNetListener
 import com.shanai.base.utils.network.NetworkStateChangeListener
 import com.shanai.base.utils.network.NetworkTypeEnum
+import com.shanai.base.view.actionsheet.ActionLoadingDialog
 import me.jessyan.autosize.AutoSizeCompat
 
 /**
@@ -23,9 +29,18 @@ import me.jessyan.autosize.AutoSizeCompat
 abstract class BaseFrameActivity<VB : ViewBinding, VM : BaseViewModel> : AppCompatActivity(),
     FrameView<VB>, NetworkStateChangeListener {
 
+
     protected abstract val mViewModel: VM
 
     protected val mBinding: VB by lazy(mode = LazyThreadSafetyMode.NONE) { createVB() }
+
+    // ActionLoadingDialog初始化
+    protected var mActionLoadingDialog: ActionLoadingDialog? = null
+
+    // 软键盘的管理器
+    private val inputMethodManager by lazy {
+        getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+    }
 
     /**
      * 是否有 [RegisterEventBus] 注解，避免重复调用 [Class.isAnnotation]
@@ -51,6 +66,26 @@ abstract class BaseFrameActivity<VB : ViewBinding, VM : BaseViewModel> : AppComp
         initRequestData()
     }
 
+    // 显示加载框
+    fun showLoading(text: String) {
+        if (mActionLoadingDialog == null || !mActionLoadingDialog!!.isShowing) {
+            mActionLoadingDialog = ActionLoadingDialog(this)
+            mActionLoadingDialog!!.setPrompt(text)
+            mActionLoadingDialog!!.show()
+        }
+    }
+
+    // 显示加载框（通过资源ID）
+    fun showLoading(resId: Int) {
+        showLoading(getString(resId))
+    }
+
+    // 隐藏加载框
+    fun dismissLoading() {
+        mActionLoadingDialog?.dismiss()
+    }
+
+
     /**
      * 初始化网络状态监听
      * @return Unit
@@ -66,6 +101,27 @@ abstract class BaseFrameActivity<VB : ViewBinding, VM : BaseViewModel> : AppComp
      */
     open fun setStatusBar() {}
 
+    /**
+     * 显示toast提示
+     */
+    open fun showShortToast(text: String) {
+        toast(text,Toast.LENGTH_SHORT)
+    }
+
+    open fun showLongToast(text: String) {
+        toast(text,Toast.LENGTH_LONG)
+    }
+
+    /**
+     * 请求权限的统一方法，子类可以直接调用此方法
+     */
+    protected fun requestPermissions(permissions: List<String>, callback: (Boolean, List<String>, List<String>) -> Unit) {
+        PermissionX.init(this)
+            .permissions(permissions)
+            .request { allGranted, grantedList, deniedList ->
+                callback(allGranted, grantedList, deniedList)
+            }
+    }
     /**
      * 网络类型更改回调
      * @param type Int 网络类型
@@ -87,6 +143,7 @@ abstract class BaseFrameActivity<VB : ViewBinding, VM : BaseViewModel> : AppComp
         if (mHaveRegisterEventBus) {
             EventBusUtils.unRegister(this)
         }
+        dismissLoading()
         super.onDestroy()
     }
 
@@ -98,5 +155,30 @@ abstract class BaseFrameActivity<VB : ViewBinding, VM : BaseViewModel> : AppComp
             AutoSizeCompat.autoConvertDensityOfGlobal((super.getResources()))
         }
         return super.getResources()
+    }
+
+    /**
+     * 显示软键盘
+     * @param view 需要获取焦点的视图
+     */
+    fun showSoftKeyboard(view: View) {
+        view.requestFocus()
+        inputMethodManager.showSoftInput(view, InputMethodManager.SHOW_IMPLICIT)
+    }
+
+    /**
+     * 隐藏软键盘
+     */
+    fun hideSoftKeyboard() {
+        currentFocus?.let { view ->
+            inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
+        }
+    }
+
+    /**
+     * 判断软键盘是否显示
+     */
+    fun isSoftKeyboardVisible(): Boolean {
+        return inputMethodManager.isActive
     }
 }

@@ -14,7 +14,7 @@
         android:gravity="center"
         android:singleLine="true"/>
 
-   <com.shanai.shanai.common.view.tablayout.widget.MsgView
+   <com.mm.shanai.common.view.tablayout.widget.MsgView
         android:id="@+id/rtv_msg_tip"
         xmlns:common="http://schemas.android.com/apk/res-auto"
         android:layout_width="wrap_content"

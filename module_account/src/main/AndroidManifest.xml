@@ -3,13 +3,13 @@
 
     <application>
         <activity
-            android:name="com.shanai.account.activity.AccountPhoneLoginActivity"
+            android:name="com.mm.shanai.module.account.ui.activity.AccountPhoneLoginActivity"
             android:exported="false"
             android:screenOrientation="portrait">
         </activity>
 
         <activity
-            android:name="com.shanai.account.activity.AccountVerifyCodeActivity"
+            android:name="com.mm.shanai.module.account.ui.activity.AccountVerifyCodeActivity"
             android:exported="false"
             android:screenOrientation="portrait">
         </activity>

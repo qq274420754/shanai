@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="base_network_disconnected">网路已断开</string>
+    <string name="base_network_connected">网络已连接</string>
+    <string name="base_loading">加载中…</string>
+
+    <string name="base_appname">闪爱</string>
+    <string name="base_tab_friend">交友</string>
+    <string name="base_tab_trend">娱乐</string>
+    <string name="base_tab_videochat">视频聊</string>
+    <string name="base_tab_messge">消息</string>
+    <string name="base_tab_me">我</string>
+
+    <string name="base_agree_and_continue">同意并继续</string>
+    <string name="base_disagree">不同意</string>
+</resources>
