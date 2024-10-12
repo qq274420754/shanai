@@ -3,6 +3,7 @@ package com.mm.shanai.module.account.ui.activity
 import com.mm.shanai.common.net.UserAuthApiService
 import com.mm.shanai.common.utils.RetrofitUtil
 import com.quyunshuo.wanandroid.common.helper.responseCodeExceptionHandler
+import com.shanai.base.mvvm.m.BaseRepository
 import okhttp3.RequestBody
 import javax.inject.Inject
 
